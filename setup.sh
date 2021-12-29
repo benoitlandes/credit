@@ -1,8 +1,8 @@
 mkdir -p ~/.streamlit/
-echo "\ 
-[serveur]\n\ 
-headless = true\n\ 
-port = $PORT\n\ 
-enableCORS = false\n\ 
-\n\ 
+echo " 
+[serveur]
+headless = true
+port = $PORT 
+enableCORS = false 
+ 
 " > ~/.streamlit/config.toml
