@@ -1,0 +1,10 @@
+streamlit
+shap
+
+numpy
+pandas
+seaborn
+
+lightgbm 
+
+flask
