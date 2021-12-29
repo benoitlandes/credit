@@ -4,7 +4,7 @@ echo "
 email = \"benoit.rouffet@gmail.com\"
 " > ~/.streamlit/credentials.toml
 echo " 
-[serveur]
+[server]
 headless = true
 port = $PORT 
 enableCORS = false 
