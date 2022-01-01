@@ -17,7 +17,7 @@ shap_values = pickle.load( open( "shap_values.p", "rb" ) )
 frame_shap = pickle.load( open( "set_shap.p", "rb" ) )
 pred_frame_dash_s1000 = pickle.load( open( "pred_frame_dash_s1000.p", "rb" ) )#Chargement dataset
 pred_model_banq2 = pickle.load( open( "pred_model_banq2.md", "rb" ) )
-set_tru_data = pickle.load( open( "set_tru_data.p", "rb" ) )
+frame_True = pickle.load( open( "set_tru_data.p", "rb" ) )
 
 
 #fenetre input
@@ -294,17 +294,17 @@ option = st.sidebar.selectbox('Interprétation',['','Individuelle','Globale','Pr
                
 if option == 'Globale':
     st.sidebar.subheader('Profil client '+ str(id_input))
-    
+    st.sidebar.write(profil_client(id_input,frame_True))
     st.write(hist_plot_global(id_input,frame_shap,pred_frame_dash_s1000))
         
 elif option == 'Individuelle':
     st.sidebar.subheader('Profil client '+ str(id_input))
-    
+    st.sidebar.write(profil_client(id_input,frame_True))
     st.write(plot_shap(id_input))
             
 elif option == 'Profils similaires':
     st.sidebar.subheader('Profil client '+ str(id_input))
-    
+    st.sidebar.write(profil_client(id_input,frame_True))
     st.write(comparaison_client_voisin(id_input, pred_frame_dash_s1000,frame_shap))
         
 else:
